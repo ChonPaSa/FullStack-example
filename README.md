@@ -15,14 +15,6 @@ subsequent visits.
 - When the user scrolls down the page, the menu should stick to the top of the
 browser’s view port and always be visible.
 
-## CSS
-Pick the framework that you like the most, or build everything from scratch. If you use a
-preprocessor, remember to send us the compiled files together with your sources.
-
-## PHP
-Frameworks, libraries or just your own creation: that’s all good for us. We like it when your
-code is object-oriented though.
-
 ## MySql
 You will find the structure of the database in the folder ./database/
 
