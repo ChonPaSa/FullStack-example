@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131831983-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-131831983-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="noindex,nofollow">
+    <title>WebDev</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name = "viewport" content = "width = device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="checkCookies();">
+    <div class="wrapper">
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">imprint</a></li>
+            </ul>  
+        </nav>
+        <header>
+            <div class="birds">
+            </div>
+        </header>
+        <main>
+            <div class="text">
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.
+                Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. </p>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> 
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.</p>
+            </div>
+            <div class="flowers">
+                <img src="img/flowers.jpg" alt="Pink flowers" />
+            </div>
+            <!-- The Modal -->   
+            <div id="contact" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content ">
+                    <div class="w3-container row">
+                        <div class="column">
+                            <h2>Welcome</h2>
+                            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor.</p>
+                            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        </div>
+                        <div class="column right">
+                            <h4>Contact form</h4>
+                            <form id="form" class="layer_right">
+                                <div id="fields">
+                                <!--Div for fields from the db-->
+                                </div>
+                                <button onclick="sendForm();document.getElementById('contact').classList.add('w3-animate-show');" class="send w3-button w3-large">send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--Modal-->
+        </main>
+    </div> <!--Wrapper-->
+</body>
+<script>
+//Sticky menu
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
+
+//fade out
+
+var modal = document.getElementById('contact');
+
+document.querySelector('.send').addEventListener('click', function() {
+    modal.classList.add('w3-animate-show');
+    })
+
+modal.addEventListener('animationend', function() {
+    if (this.classList.contains('w3-animate-show')) {
+        this.style.display = 'none';
+        this.classList.remove('w3-animate-show')
+    }
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.add('w3-animate-show');
+        modal.addEventListener('animationend', function() {
+            if (this.classList.contains('w3-animate-show')) {
+                this.style.display = 'none';
+                this.classList.remove('w3-animate-show')
+            }
+        });
+    }
+};
+
+    
+    
+</script>
+</html>
