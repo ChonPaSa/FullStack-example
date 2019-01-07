@@ -1,6 +1,6 @@
 # FullStack-example
 
-** Example of a development using HTML, CSS3, JS, jQuery, MySql, PHP Object oriented, W3.CSS, Ajax, Json.... **
+__Example of a development using HTML, CSS3, JS, jQuery, MySql, PHP Object oriented, W3.CSS, Ajax, Json....__
 
 In short, it’s all about a web page with a form. The form reads the fields from a database table
 and saves data to a different table on the same database.
